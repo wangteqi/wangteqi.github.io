@@ -1,0 +1,11 @@
+# macos文件
+.DS_Store
+
+# pycharm文件
+.idea/
+
+# 使用mkdocs build产生的网站文件
+site/
+
+# 脚本文件
+custom_upload.sh

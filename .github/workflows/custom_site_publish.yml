@@ -1,0 +1,52 @@
+# 定义工作流名称
+name: custom-site-publish
+# 触发条件
+on:
+  push: # 这个工作流会在每次向仓库main分支推送代码时触发
+    branches:
+      - main
+## 构建工作流中的任务
+jobs:
+  # 任务名称
+  deploy:
+    # 指定环境
+    environment: mkdocs-deploy
+    # 指定了运行该任务的虚拟环境是最新版本的Ubuntu
+    runs-on: ubuntu-latest
+    # 执行步骤
+    steps:
+      ## 推送到Github上
+      # 检出代码到运行工作流的虚拟环境中
+      - name: Checkout repository  # 动作名称
+        uses: actions/checkout@v4  # 动作
+      # 配置Git凭证，由GitHub Actions Bot完成后续的提交操作
+      - name: Configure Git Credentials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      # 自动设置python环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: # 指定版本参数
+          python-version: 3.x
+      ## 使用缓存更快的下载相关包
+      # 缓存文件
+      - name: Cache modules
+        # 使用缓存action
+        uses: actions/cache@v4
+        with:
+          # 需要缓存的文件的路径
+          path: ~/.cache/pip
+          # 对缓存的文件指定的唯一表示
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          # 当 key 没有命中缓存时，用于恢复缓存key值的有序列表
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      ## 安装相关依赖包
+      # 使用包管理工具pip安装 mkdocs-material
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      ## 部署网站
+      # 使用 mkdocs-material 构建网站并部署到 gh-pages 分支
+      - name: Deploy to gh-pages
+        run: mkdocs gh-deploy --force

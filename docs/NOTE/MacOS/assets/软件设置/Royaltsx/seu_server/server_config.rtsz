@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RTSZDocument>
+  <RoyalDocument>
+    <ID>8319194c-b1b8-433c-ba9f-c3eab43de8a5</ID>
+    <Modified>06/19/2024 07:43:57.358</Modified>
+    <ModifiedBy>coco</ModifiedBy>
+    <Name>server_config</Name>
+    <Created>06/19/2024 07:38:34.394</Created>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>0</PositionNr>
+    <IsExpanded>True</IsExpanded>
+    <DocumentType>Workspace</DocumentType>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+    <PasswordHash />
+    <AutoMergeOption>1</AutoMergeOption>
+    <SaveOption>2</SaveOption>
+  </RoyalDocument>
+  <RoyalTrash>
+    <ID>e77b739e-654f-4282-a553-8ddc9b9f7fbb</ID>
+    <Name>Trashcan</Name>
+    <Modified>06/19/2024 07:38:34.410</Modified>
+    <Created>06/19/2024 07:38:34.394</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>2</PositionNr>
+    <IsExpanded>False</IsExpanded>
+    <ParentID>8319194c-b1b8-433c-ba9f-c3eab43de8a5</ParentID>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalTrash>
+  <RoyalFolder>
+    <ID>4cab2129-22d9-4252-b26f-8db07e087a79</ID>
+    <Name>Connections</Name>
+    <Modified>06/19/2024 07:38:34.410</Modified>
+    <Created>06/19/2024 07:38:34.395</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>4</PositionNr>
+    <IsExpanded>True</IsExpanded>
+    <ParentID>8319194c-b1b8-433c-ba9f-c3eab43de8a5</ParentID>
+    <ObjectSpecialUsage />
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalFolder>
+  <RoyalFolder>
+    <ID>2e3d9437-6abb-4ee3-a57a-19bb397679b7</ID>
+    <Name>Server-2080ti</Name>
+    <Modified>06/19/2024 07:38:54.235</Modified>
+    <Created>06/19/2024 07:38:39.389</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>2</PositionNr>
+    <IsExpanded>True</IsExpanded>
+    <ParentID>4cab2129-22d9-4252-b26f-8db07e087a79</ParentID>
+    <ObjectSpecialUsage />
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalFolder>
+  <RoyalSSHConnection>
+    <ID>00cd6d99-5390-45da-84b9-0bcdb9d1a8c9</ID>
+    <Name>SSH-2080ti</Name>
+    <Modified>06/19/2024 07:40:37.771</Modified>
+    <Created>06/19/2024 07:40:02.103</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>2</PositionNr>
+    <IsConnectionTemplate>False</IsConnectionTemplate>
+    <ParentID>2e3d9437-6abb-4ee3-a57a-19bb397679b7</ParentID>
+    <ObjectSpecialUsage />
+    <URI>223.3.89.125</URI>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+    <Passphrase />
+    <ProxyPassword />
+    <ConnectionType>ssh;SSH</ConnectionType>
+    <IsTelnetConnection>False</IsTelnetConnection>
+    <IsSerialPortConnection>False</IsSerialPortConnection>
+    <Port>22</Port>
+    <Description />
+    <PhysicalAddress />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <CredentialFromParent>False</CredentialFromParent>
+    <CredentialMode>4</CredentialMode>
+    <CredentialAutologon>True</CredentialAutologon>
+    <CredentialOmitDomain>False</CredentialOmitDomain>
+    <CredentialUsername />
+    <CredentialId>9941d658-e339-48ec-8016-7c43c053463d</CredentialId>
+    <CredentialName>Credential-2080ti</CredentialName>
+    <CredentialKeyMode>0</CredentialKeyMode>
+    <CredentialKeyFile />
+    <PrivateKeyPath />
+    <CredentialKeyContent />
+    <Favorite>False</Favorite>
+  </RoyalSSHConnection>
+  <RoyalFileTransferConnection>
+    <ID>5e73085c-48de-4d98-985c-be0e7e2836f4</ID>
+    <Name>SFTP-2080ti</Name>
+    <Modified>06/19/2024 07:40:57.937</Modified>
+    <Created>06/19/2024 07:40:42.433</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>4</PositionNr>
+    <IsConnectionTemplate>False</IsConnectionTemplate>
+    <ParentID>2e3d9437-6abb-4ee3-a57a-19bb397679b7</ParentID>
+    <ObjectSpecialUsage />
+    <URI>223.3.89.125</URI>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+    <Passphrase />
+    <ProxyPassword />
+    <Protocol>3</Protocol>
+    <Port>22</Port>
+    <Description />
+    <PhysicalAddress />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <CredentialFromParent>False</CredentialFromParent>
+    <CredentialMode>4</CredentialMode>
+    <CredentialAutologon>True</CredentialAutologon>
+    <CredentialOmitDomain>False</CredentialOmitDomain>
+    <CredentialUsername />
+    <CredentialId>9941d658-e339-48ec-8016-7c43c053463d</CredentialId>
+    <CredentialName>Credential-2080ti</CredentialName>
+    <CredentialKeyMode>0</CredentialKeyMode>
+    <CredentialKeyFile />
+    <PrivateKeyPath />
+    <CredentialKeyContent />
+    <Favorite>False</Favorite>
+  </RoyalFileTransferConnection>
+  <RoyalFolder>
+    <ID>aea28200-d0e2-4170-8366-cebd9e739d17</ID>
+    <Name>Server-3090</Name>
+    <Modified>06/19/2024 07:39:03.696</Modified>
+    <Created>06/19/2024 07:38:58.247</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>4</PositionNr>
+    <IsExpanded>True</IsExpanded>
+    <ParentID>4cab2129-22d9-4252-b26f-8db07e087a79</ParentID>
+    <ObjectSpecialUsage />
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalFolder>
+  <RoyalSSHConnection>
+    <ID>87898b6c-64e5-49a9-8272-6cdd5c54f0eb</ID>
+    <Name>SSH-3090</Name>
+    <Modified>06/19/2024 07:41:24.123</Modified>
+    <Created>06/19/2024 07:41:07.324</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>2</PositionNr>
+    <IsConnectionTemplate>False</IsConnectionTemplate>
+    <ParentID>aea28200-d0e2-4170-8366-cebd9e739d17</ParentID>
+    <ObjectSpecialUsage />
+    <URI>223.3.74.184</URI>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+    <Passphrase />
+    <ProxyPassword />
+    <ConnectionType>ssh;SSH</ConnectionType>
+    <IsTelnetConnection>False</IsTelnetConnection>
+    <IsSerialPortConnection>False</IsSerialPortConnection>
+    <Port>22</Port>
+    <Description />
+    <PhysicalAddress />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <CredentialFromParent>False</CredentialFromParent>
+    <CredentialMode>4</CredentialMode>
+    <CredentialAutologon>True</CredentialAutologon>
+    <CredentialOmitDomain>False</CredentialOmitDomain>
+    <CredentialUsername />
+    <CredentialId>9941d658-e339-48ec-8016-7c43c053463d</CredentialId>
+    <CredentialName>Credential-3090</CredentialName>
+    <CredentialKeyMode>0</CredentialKeyMode>
+    <CredentialKeyFile />
+    <PrivateKeyPath />
+    <CredentialKeyContent />
+    <Favorite>False</Favorite>
+  </RoyalSSHConnection>
+  <RoyalFileTransferConnection>
+    <ID>780386f6-881a-4161-86d4-568530351d9b</ID>
+    <Name>SFTP-3090</Name>
+    <Modified>06/19/2024 07:41:46.137</Modified>
+    <Created>06/19/2024 07:41:28.687</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>4</PositionNr>
+    <IsConnectionTemplate>False</IsConnectionTemplate>
+    <ParentID>aea28200-d0e2-4170-8366-cebd9e739d17</ParentID>
+    <ObjectSpecialUsage />
+    <URI>223.3.74.184</URI>
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+    <Passphrase />
+    <ProxyPassword />
+    <Protocol>3</Protocol>
+    <Port>22</Port>
+    <Description />
+    <PhysicalAddress />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <CredentialFromParent>False</CredentialFromParent>
+    <CredentialMode>4</CredentialMode>
+    <CredentialAutologon>True</CredentialAutologon>
+    <CredentialOmitDomain>False</CredentialOmitDomain>
+    <CredentialUsername />
+    <CredentialId>9941d658-e339-48ec-8016-7c43c053463d</CredentialId>
+    <CredentialName>Credential-3090</CredentialName>
+    <CredentialKeyMode>0</CredentialKeyMode>
+    <CredentialKeyFile />
+    <PrivateKeyPath />
+    <CredentialKeyContent />
+    <Favorite>False</Favorite>
+  </RoyalFileTransferConnection>
+  <RoyalFolder>
+    <ID>470750e4-62c2-4393-a6b0-9ee3c50c8086</ID>
+    <Name>Credentials</Name>
+    <Modified>06/19/2024 07:38:34.410</Modified>
+    <Created>06/19/2024 07:38:34.406</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>6</PositionNr>
+    <IsExpanded>True</IsExpanded>
+    <ParentID>8319194c-b1b8-433c-ba9f-c3eab43de8a5</ParentID>
+    <ObjectSpecialUsage />
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalFolder>
+  <RoyalCredential>
+    <ID>9941d658-e339-48ec-8016-7c43c053463d</ID>
+    <Name>Credential-2080ti</Name>
+    <Modified>06/19/2024 07:39:38.511</Modified>
+    <Created>06/19/2024 07:39:08.091</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>2</PositionNr>
+    <ParentID>470750e4-62c2-4393-a6b0-9ee3c50c8086</ParentID>
+    <UserName>wangteqi</UserName>
+    <Password>nDjA6GZP0V2udf1PpGCFajnr4EGUbNVn+hq0bhhYydm0MtqrH8fYGdJ/cRBF+Iu1XPVC9VbmcUwb8h7b0S2BYa5h6O8jSQ9wZfkQ2noEzDQ=</Password>
+    <Description />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <Favorite>False</Favorite>
+  </RoyalCredential>
+  <RoyalCredential>
+    <ID>6a55bdc1-3b6c-4188-a776-19f90c235e99</ID>
+    <Name>Credential-3090</Name>
+    <Modified>06/19/2024 07:39:56.029</Modified>
+    <Created>06/19/2024 07:39:43.574</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>4</PositionNr>
+    <ParentID>470750e4-62c2-4393-a6b0-9ee3c50c8086</ParentID>
+    <UserName>wtq</UserName>
+    <Password>NvYiVx8f0GaQ04cu41kuvHGK5s5B6Es46/DfvwokU+5a8QqqPNlPr95opY339Df9yLHH/gslhPTqsKeZIlvOv8WGe4z/zRoLVUK4L5YPlP4=</Password>
+    <Description />
+    <CustomImageName />
+    <CustomImageList>{}</CustomImageList>
+    <CustomImage />
+    <ColorFromParent>False</ColorFromParent>
+    <ColorName />
+    <Color />
+    <Favorite>False</Favorite>
+  </RoyalCredential>
+  <RoyalFolder>
+    <ID>b0d70481-4f19-42bd-88d9-62fd15fc5dcf</ID>
+    <Name>Tasks</Name>
+    <Modified>06/19/2024 07:38:34.410</Modified>
+    <Created>06/19/2024 07:38:34.406</Created>
+    <ModifiedBy>coco</ModifiedBy>
+    <CreatedBy>coco</CreatedBy>
+    <PositionNr>8</PositionNr>
+    <IsExpanded>False</IsExpanded>
+    <ParentID>8319194c-b1b8-433c-ba9f-c3eab43de8a5</ParentID>
+    <ObjectSpecialUsage />
+    <CustomField11 />
+    <CustomField12 />
+    <CustomField13 />
+    <CustomField14 />
+    <CustomField15 />
+    <CustomField16 />
+    <CustomField17 />
+    <CustomField18 />
+    <CustomField19 />
+    <CustomField20 />
+    <CustomProperties />
+    <CredentialPassword />
+    <CredentialPassphrase />
+  </RoyalFolder>
+</RTSZDocument>
