@@ -1,0 +1,1841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="王特起的个人网站说明： （标签修改需要更新2处内容icon里的tag, extra里的tags）， （添加文档需要更新nav中的内容）， （添加文档状态图标需要更新extra中status的内容）。 参考文档： （https://squidfunk.github.io/mkdocs-material/）， （https://facelessuser.github.io/pymdown-extensions/）">
+      
+      
+        <meta name="author" content="王特起">
+      
+      
+        <link rel="canonical" href="https://wangteqi.github.io/NOTE/Website/pycharm_config/">
+      
+      
+        <link rel="prev" href="../github_config/">
+      
+      
+        <link rel="next" href="../../../assets/tags/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Pycharm中的配置 - 王特起的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--me_icon{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.427 16.615v-6.042c0-.997-.444-1.669-1.541-1.669-.906 0-1.754.614-2.159 1.228v6.483H5.704v-6.042c0-.997-.423-1.669-1.523-1.669-.905 0-1.734.633-2.158 1.228v6.483H0V7.351h2.023v1.247C2.428 8.04 3.642 7.12 5.068 7.12c1.386 0 2.235.69 2.543 1.688.52-.825 1.754-1.688 3.16-1.688 1.697 0 2.68.92 2.68 2.8v6.694h-2.024zM24 12.163c0-2.925-1.788-5.042-4.604-5.042-2.777 0-4.759 2.174-4.759 4.869 0 2.945 2.079 4.888 4.913 4.89 1.476 0 2.855-.482 3.807-1.368l-.932-1.328c-.68.673-1.747 1.04-2.68 1.04-1.768 0-2.815-1.174-2.971-2.56H24v-.5zm-7.245-.943c.077-1.116.893-2.444 2.622-2.444 1.845 0 2.602 1.347 2.66 2.444h-5.282z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monaco:300,300i,400,400i,700,700i%7CMonaco:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Monaco";--md-code-font:"Monaco"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pycharm中的配置" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="王特起的个人网站" class="md-header__button md-logo" aria-label="王特起的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            王特起的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pycharm中的配置
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="System preference"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="System preference" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m288 376.4.1-.1 26.4 14.1 85.2 45.5-16.5-97.6-4.8-28.7 20.7-20.5 70.1-69.3-96.1-14.2-29.3-4.3-12.9-26.6-42.8-87.8-.1.3v289.2zm175.1 98.3c2 12-3 24.2-12.9 31.3s-23 8-33.8 2.3l-128.3-68.5-128.3 68.5c-10.8 5.7-23.9 4.8-33.8-2.3s-14.9-19.3-12.9-31.3L137.8 329 33.6 225.9c-8.6-8.5-11.7-21.2-7.9-32.7s13.7-19.9 25.7-21.7L195 150.3 259.4 18c5.4-11 16.5-18 28.8-18s23.4 7 28.8 18l64.3 132.3 143.6 21.2c12 1.8 22 10.2 25.7 21.7s.7 24.2-7.9 32.7L438.5 329l24.6 145.7z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange"  aria-label="Dark"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wangteqi/wangteqi.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wangteqi.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ME/" class="md-tabs__link">
+          
+  
+    
+  
+  我
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../assets/tags/" class="md-tabs__link">
+          
+  
+    
+  
+  标签
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="王特起的个人网站" class="md-nav__button md-logo" aria-label="王特起的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+
+    </a>
+    王特起的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wangteqi/wangteqi.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wangteqi.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ME/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    我
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            我
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ME/resume/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    个人简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    笔记
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MacOS设置
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            MacOS设置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MacOS/system_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    系统偏好设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MacOS/software_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用软件设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    个人网站搭建
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            个人网站搭建
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github中的配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pycharm中的配置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pycharm中的配置
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#整体结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#脚本文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#忽略文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      忽略文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#依赖文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      依赖文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mkdocs文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#工作流文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作流文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#主页index文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      主页index文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附加文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      附加文件的配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附加文件的配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      js文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      css文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#缩略词文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      缩略词文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#标签文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    标签
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            标签
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../assets/tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标签
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#整体结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#脚本文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚本文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#忽略文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      忽略文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#依赖文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      依赖文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mkdocs文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#工作流文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作流文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#主页index文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      主页index文件的配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附加文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      附加文件的配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附加文件的配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#js文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      js文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      css文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#缩略词文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      缩略词文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#标签文件的配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签文件的配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="pycharm中的配置">Pycharm中的配置<a class="headerlink" href="#pycharm中的配置" title="Permanent link">👻</a></h1>
+<h2 id="整体结构">整体结构<a class="headerlink" href="#整体结构" title="Permanent link">👻</a></h2>
+<p><img alt="Pycharm_1" src="../assets/Pycharm_1.png" /></p>
+<h2 id="脚本文件的配置">脚本文件的配置<a class="headerlink" href="#脚本文件的配置" title="Permanent link">👻</a></h2>
+<p>文件路径：./custom_upload.sh</p>
+<ol>
+<li>
+<p>首先创建脚本文件:</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch<span class="w"> </span>./custom_upload.sh
+<span class="linenos" data-linenos="2 "></span><span class="c1">## 方法一：使用sh运行脚本</span>
+<span class="linenos" data-linenos="3 "></span>sh<span class="w"> </span>custom_upload.sh
+<span class="linenos" data-linenos="4 "></span><span class="c1">## 方法二：增加可执行权限 （个人使用方法二）</span>
+<span class="linenos" data-linenos="5 "></span>chmod<span class="w"> </span>u+x<span class="w"> </span>./custom_upload.sh
+<span class="linenos" data-linenos="6 "></span><span class="c1"># 直接使用./custom_upload.sh运行脚本</span>
+<span class="linenos" data-linenos="7 "></span>./custom_upload.sh
+</code></pre></div>
+</li>
+<li>
+<p>编辑脚本文件内容：</p>
+<ul>
+<li>
+<p>创建忽略文件，将<a href="#忽略文件的配置">忽略文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch<span class="w"> </span>.gitignore
+</code></pre></div>
+</li>
+<li>
+<p>创建依赖文件，将<a href="#依赖文件的配置">依赖文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch<span class="w"> </span>requirements.txt
+</code></pre></div>
+</li>
+<li>
+<p>创建Mkdocs文件，将<a href="#mkdocs文件的配置">Mkdocs文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 一定要先创建完依赖文件，才能安装mkdocs-material的包</span>
+<span class="linenos" data-linenos="2 "></span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="linenos" data-linenos="3 "></span><span class="c1"># 初始化mkdocs项目（要先安装完对应的包）</span>
+<span class="linenos" data-linenos="4 "></span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</code></pre></div>
+</li>
+<li>
+<p>创建工作流文件，将<a href="#工作流文件的配置">工作流文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 创建工作流文件所在目录</span>
+<span class="linenos" data-linenos="2 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>.github/workflows
+<span class="linenos" data-linenos="3 "></span>touch<span class="w"> </span>.github/workflows/custom_site_publish.yml
+</code></pre></div>
+</li>
+<li>
+<p>创建附加文件</p>
+<ul>
+<li>
+<p>创建js文件，将<a href="#js文件的配置">js文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 创建js文件所在目录</span>
+<span class="linenos" data-linenos="2 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/assets/javascripts
+<span class="linenos" data-linenos="3 "></span>touch<span class="w"> </span>docs/assets/javascripts/katex.js
+</code></pre></div>
+</li>
+<li>
+<p>创建css文件，将<a href="#css文件的配置">css文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># 创建css文件所在目录</span>
+<span class="linenos" data-linenos="2 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/assets/stylesheets
+<span class="linenos" data-linenos="3 "></span>touch<span class="w"> </span>docs/assets/stylesheets/extra.css
+</code></pre></div>
+</li>
+<li>
+<p>创建缩略词文件，将<a href="#缩略词文件的配置">缩略词文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch<span class="w"> </span>docs/assets/abbreviations.md
+</code></pre></div>
+</li>
+<li>
+<p>创建标签文件，将<a href="#标签文件的配置">标签文件的配置</a>复制到里面</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>touch<span class="w"> </span>docs/assets/tags.md
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>初始化仓库</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 初始化本地仓库</span>
+<span class="linenos" data-linenos=" 2 "></span>git<span class="w"> </span>init
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># 添加全部文件到暂存区</span>
+<span class="linenos" data-linenos=" 4 "></span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="linenos" data-linenos=" 5 "></span><span class="c1"># 提交暂存区内容到本地仓库</span>
+<span class="linenos" data-linenos=" 6 "></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;init&quot;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># 添加远程仓库</span>
+<span class="linenos" data-linenos=" 8 "></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/wangteqi/wangteqi.github.io.git
+<span class="linenos" data-linenos=" 9 "></span><span class="c1"># 从远程更新仓库的本地版本 </span>
+<span class="linenos" data-linenos="10 "></span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
+<span class="linenos" data-linenos="11 "></span><span class="c1"># 推送到远程仓库 (第一次推送时需要输入账号：邮箱，密码：令牌)</span>
+<span class="linenos" data-linenos="12 "></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+</li>
+<li>
+<p>Git提交修改的代码（最终只需这一步）</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 查看文件当前状态</span>
+<span class="linenos" data-linenos=" 2 "></span>git<span class="w"> </span>status
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># 添加全部文件到暂存区</span>
+<span class="linenos" data-linenos=" 4 "></span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="linenos" data-linenos=" 5 "></span><span class="c1"># 提交暂存区内容到本地仓库</span>
+<span class="linenos" data-linenos=" 6 "></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;init&quot;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># 从远程更新仓库的本地版本</span>
+<span class="linenos" data-linenos=" 8 "></span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
+<span class="linenos" data-linenos=" 9 "></span><span class="c1"># 推送到远程仓库</span>
+<span class="linenos" data-linenos="10 "></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>完整的脚本文件内容</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># Step1: 创建忽略文件和依赖文件</span>
+<span class="linenos" data-linenos=" 2 "></span>touch<span class="w"> </span>.gitignore
+<span class="linenos" data-linenos=" 3 "></span>touch<span class="w"> </span>requirements.txt
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="c1"># Step2: 安装mkdocs-material，并初始化Mkdocs项目</span>
+<span class="linenos" data-linenos=" 6 "></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="linenos" data-linenos=" 7 "></span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1"># Step3: 创建相关文件（工作流文件，附加文件）</span>
+<span class="linenos" data-linenos="10 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>.github/workflows
+<span class="linenos" data-linenos="11 "></span>touch<span class="w"> </span>.github/workflows/custom_site_publish.yml
+<span class="linenos" data-linenos="12 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/assets/javascripts
+<span class="linenos" data-linenos="13 "></span>touch<span class="w"> </span>docs/assets/javascripts/katex.js
+<span class="linenos" data-linenos="14 "></span>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/assets/stylesheets
+<span class="linenos" data-linenos="15 "></span>touch<span class="w"> </span>docs/assets/stylesheets/extra.css
+<span class="linenos" data-linenos="16 "></span>touch<span class="w"> </span>docs/assets/abbreviations.md
+<span class="linenos" data-linenos="17 "></span>touch<span class="w"> </span>docs/assets/tags.md
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span><span class="c1"># Step4：初始化仓库</span>
+<span class="linenos" data-linenos="20 "></span>git<span class="w"> </span>init
+<span class="linenos" data-linenos="21 "></span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="linenos" data-linenos="22 "></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;init&quot;</span>
+<span class="linenos" data-linenos="23 "></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/wangteqi/wangteqi.github.io.git
+<span class="linenos" data-linenos="24 "></span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
+<span class="linenos" data-linenos="25 "></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span><span class="c1"># Step5：提交修改的代码（后续提交只需要这一步骤，其余步骤内容注释掉）</span>
+<span class="linenos" data-linenos="28 "></span>git<span class="w"> </span>status
+<span class="linenos" data-linenos="29 "></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;-----------------------------------------------------&quot;</span>
+<span class="linenos" data-linenos="30 "></span>git<span class="w"> </span>add<span class="w"> </span>.
+<span class="linenos" data-linenos="31 "></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;init&quot;</span>
+<span class="linenos" data-linenos="32 "></span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
+<span class="linenos" data-linenos="33 "></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+</li>
+</ol>
+<h2 id="忽略文件的配置">忽略文件的配置<a class="headerlink" href="#忽略文件的配置" title="Permanent link">👻</a></h2>
+<ul>
+<li>
+<p><a href="https://www.benhailong.com/?p=545">.gitignore规则不生效</a>
+    .gitignore只能忽略那些Untracked的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。</p>
+<p>解决方法：删除本地缓存（改变成Untrack状态）</p>
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>--cached<span class="w"> </span>.
+</code></pre></div>
+</li>
+<li>
+<p>文件路径：./.gitignore</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span># macos文件
+<span class="linenos" data-linenos=" 2 "></span>.DS_Store
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span># pycharm文件
+<span class="linenos" data-linenos=" 5 "></span>.idea/
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span># 使用mkdocs build产生的网站文件
+<span class="linenos" data-linenos=" 8 "></span>site/
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span># 脚本文件
+<span class="linenos" data-linenos="11 "></span>custom_upload.sh
+</code></pre></div>
+</li>
+</ul>
+<h2 id="依赖文件的配置">依赖文件的配置<a class="headerlink" href="#依赖文件的配置" title="Permanent link">👻</a></h2>
+<ul>
+<li>
+<p>需要用到的包名，如mkdocs-material</p>
+</li>
+<li>
+<p>文件路径：./requirements.txt</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>mkdocs-material
+</code></pre></div>
+</li>
+</ul>
+<h2 id="mkdocs文件的配置">Mkdocs文件的配置<a class="headerlink" href="#mkdocs文件的配置" title="Permanent link">👻</a></h2>
+<ul>
+<li>
+<p>配置Material主题</p>
+</li>
+<li>
+<p>相关资料</p>
+<ul>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for Mkdocs文档说明</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search">表情查询</a></li>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown Extension的文档说明</a></li>
+</ul>
+</li>
+<li>
+<p>文件路径: ./mkdocs.yml</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="linenos" data-linenos="  1 "></span><span class="c1"># 网站名字</span>
+<span class="linenos" data-linenos="  2 "></span><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">王特起的个人网站</span>
+<span class="linenos" data-linenos="  3 "></span><span class="c1"># 网站地址</span>
+<span class="linenos" data-linenos="  4 "></span><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://wangteqi.github.io</span>
+<span class="linenos" data-linenos="  5 "></span><span class="c1"># 网站作者</span>
+<span class="linenos" data-linenos="  6 "></span><span class="nt">site_author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">王特起</span>
+<span class="linenos" data-linenos="  7 "></span><span class="c1"># 网站描述</span>
+<span class="linenos" data-linenos="  8 "></span><span class="nt">site_description</span><span class="p">:</span>
+<span class="linenos" data-linenos="  9 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">王特起的个人网站说明：</span>
+<span class="linenos" data-linenos=" 10 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">（标签修改需要更新2处内容icon里的tag, extra里的tags），</span>
+<span class="linenos" data-linenos=" 11 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">（添加文档需要更新nav中的内容），</span>
+<span class="linenos" data-linenos=" 12 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">（添加文档状态图标需要更新extra中status的内容）。</span>
+<span class="linenos" data-linenos=" 13 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">参考文档：</span>
+<span class="linenos" data-linenos=" 14 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">（https://squidfunk.github.io/mkdocs-material/），</span>
+<span class="linenos" data-linenos=" 15 "></span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">（https://facelessuser.github.io/pymdown-extensions/）</span>
+<span class="linenos" data-linenos=" 16 "></span>
+<span class="linenos" data-linenos=" 17 "></span>
+<span class="linenos" data-linenos=" 18 "></span><span class="c1"># GitHub 仓库</span>
+<span class="linenos" data-linenos=" 19 "></span><span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wangteqi.github.io</span><span class="w">     </span><span class="c1"># 仓库名称</span>
+<span class="linenos" data-linenos=" 20 "></span><span class="nt">repo_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/wangteqi/wangteqi.github.io</span><span class="w">  </span><span class="c1"># 仓库url地址</span>
+<span class="linenos" data-linenos=" 21 "></span><span class="nt">edit_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edit/main/docs</span><span class="w">  </span><span class="c1"># 跳转至GitHub修改Markdown源文件</span>
+<span class="linenos" data-linenos=" 22 "></span>
+<span class="linenos" data-linenos=" 23 "></span><span class="c1"># 左下角的版权声明</span>
+<span class="linenos" data-linenos=" 24 "></span><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copyright &amp;copy; 2024 ~ now |  🫥 王特起 (QiQ_iQi)</span>
+<span class="linenos" data-linenos=" 25 "></span>
+<span class="linenos" data-linenos=" 26 "></span><span class="c1">## 主题配置</span>
+<span class="linenos" data-linenos=" 27 "></span><span class="nt">theme</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 28 "></span><span class="w">  </span><span class="c1"># 主题名称</span>
+<span class="linenos" data-linenos=" 29 "></span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span><span class="w">            </span><span class="c1"># 启用material主题</span>
+<span class="linenos" data-linenos=" 30 "></span><span class="w">  </span><span class="c1"># 更改主题的整体外观</span>
+<span class="linenos" data-linenos=" 31 "></span><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 32 "></span><span class="w">    </span><span class="c1"># 跟随系统主题</span>
+<span class="linenos" data-linenos=" 33 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">media</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;(prefers-color-scheme)&quot;</span>
+<span class="linenos" data-linenos=" 34 "></span><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 35 "></span><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/solid/star-half-stroke</span>
+<span class="linenos" data-linenos=" 36 "></span><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System preference</span>
+<span class="linenos" data-linenos=" 37 "></span><span class="w">    </span><span class="c1"># 浅色主题</span>
+<span class="linenos" data-linenos=" 38 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">media</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;(prefers-color-scheme:</span><span class="nv"> </span><span class="s">light)&quot;</span>
+<span class="linenos" data-linenos=" 39 "></span><span class="w">      </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w">       </span><span class="c1">#浅深主题</span>
+<span class="linenos" data-linenos=" 40 "></span><span class="w">      </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep purple</span><span class="w">       </span><span class="c1">#主题色, 标题、侧边栏、文本链接</span>
+<span class="linenos" data-linenos=" 41 "></span><span class="w">      </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep orange</span><span class="w">   </span><span class="c1">#强调色, 悬停的链接、按钮和滚动条</span>
+<span class="linenos" data-linenos=" 42 "></span><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 43 "></span><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/weather-sunny</span><span class="w">  </span><span class="c1"># 组件图标</span>
+<span class="linenos" data-linenos=" 44 "></span><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Light</span><span class="w">                   </span><span class="c1"># 组件名称</span>
+<span class="linenos" data-linenos=" 45 "></span><span class="w">    </span><span class="c1"># 深色主题</span>
+<span class="linenos" data-linenos=" 46 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">media</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;(prefers-color-scheme:</span><span class="nv"> </span><span class="s">dark)&quot;</span>
+<span class="linenos" data-linenos=" 47 "></span><span class="w">      </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span>
+<span class="linenos" data-linenos=" 48 "></span><span class="w">      </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue grey</span>
+<span class="linenos" data-linenos=" 49 "></span><span class="w">      </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep orange</span>
+<span class="linenos" data-linenos=" 50 "></span><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 51 "></span><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/weather-night</span>
+<span class="linenos" data-linenos=" 52 "></span><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dark</span>
+<span class="linenos" data-linenos=" 53 "></span><span class="w">  </span><span class="c1"># 字体设置</span>
+<span class="linenos" data-linenos=" 54 "></span><span class="w">  </span><span class="nt">font</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 55 "></span><span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monaco</span>
+<span class="linenos" data-linenos=" 56 "></span><span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monaco</span>
+<span class="linenos" data-linenos=" 57 "></span><span class="w">  </span><span class="c1"># 语言设置</span>
+<span class="linenos" data-linenos=" 58 "></span><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;en&#39;</span><span class="w"> </span><span class="c1">#网页的语言</span>
+<span class="linenos" data-linenos=" 59 "></span><span class="w">  </span><span class="c1"># 图标 (搜索图标的链接: https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search)</span>
+<span class="linenos" data-linenos=" 60 "></span><span class="w">  </span><span class="nt">icon</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 61 "></span><span class="w">    </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/github-alt</span><span class="w">    </span><span class="c1"># 网页的图标</span>
+<span class="linenos" data-linenos=" 62 "></span><span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/github</span><span class="w">        </span><span class="c1"># github仓库的图标</span>
+<span class="linenos" data-linenos=" 63 "></span><span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="c1"># 标签的图标（需要更新tag）</span>
+<span class="linenos" data-linenos=" 64 "></span><span class="w">      </span><span class="nt">me_icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simple/aboutdotme</span>
+<span class="linenos" data-linenos=" 65 "></span><span class="w">  </span><span class="c1"># 功能</span>
+<span class="linenos" data-linenos=" 66 "></span><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 67 "></span><span class="w">    </span><span class="c1"># 导航的设置</span>
+<span class="linenos" data-linenos=" 68 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tracking</span><span class="w">    </span><span class="c1"># URL锚点跟踪</span>
+<span class="linenos" data-linenos=" 69 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span><span class="w">        </span><span class="c1"># 显示顶层导航栏标签页</span>
+<span class="linenos" data-linenos=" 70 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs.sticky</span><span class="w"> </span><span class="c1"># 顶层导航栏标签页始终可见</span>
+<span class="linenos" data-linenos=" 71 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.expand</span><span class="w">      </span><span class="c1"># 展开左侧导航栏</span>
+<span class="linenos" data-linenos=" 72 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.indexes</span><span class="w">     </span><span class="c1"># 提供标签页的概述页面</span>
+<span class="linenos" data-linenos=" 73 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toc.follow</span><span class="w">             </span><span class="c1"># 目录跟随</span>
+<span class="linenos" data-linenos=" 74 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.top</span><span class="w">         </span><span class="c1"># 返回顶部，在上滑时出现</span>
+<span class="linenos" data-linenos=" 75 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.footer</span><span class="w">      </span><span class="c1"># 底部导航栏</span>
+<span class="linenos" data-linenos=" 76 "></span><span class="w">    </span><span class="c1"># 网站搜索的设置</span>
+<span class="linenos" data-linenos=" 77 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search.suggest</span><span class="w">         </span><span class="c1"># 搜索输入一些字母时推荐补全整个单词</span>
+<span class="linenos" data-linenos=" 78 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search.highlight</span><span class="w">       </span><span class="c1"># 搜索出的文章关键词加入高亮</span>
+<span class="linenos" data-linenos=" 79 "></span><span class="w">    </span><span class="c1"># 代码的设置</span>
+<span class="linenos" data-linenos=" 80 "></span><span class="w">  </span><span class="c1">#    - content.action.view    # 查看源码</span>
+<span class="linenos" data-linenos=" 81 "></span><span class="w">  </span><span class="c1">#    -  content.action.edit   # 编辑源码</span>
+<span class="linenos" data-linenos=" 82 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.copy</span><span class="w">      </span><span class="c1"># 复制代码</span>
+<span class="linenos" data-linenos=" 83 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.annotate</span><span class="w">  </span><span class="c1"># 代码悬浮注释</span>
+<span class="linenos" data-linenos=" 84 "></span><span class="w">    </span><span class="c1"># 内容选项卡设置</span>
+<span class="linenos" data-linenos=" 85 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.tabs.link</span><span class="w">      </span><span class="c1"># 同步联结并联的内容选项卡</span>
+<span class="linenos" data-linenos=" 86 "></span><span class="w">    </span><span class="c1"># 链接注释</span>
+<span class="linenos" data-linenos=" 87 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.tooltips</span><span class="w">       </span><span class="c1"># 设置链接名称</span>
+<span class="linenos" data-linenos=" 88 "></span>
+<span class="linenos" data-linenos=" 89 "></span>
+<span class="linenos" data-linenos=" 90 "></span><span class="c1">## markdown扩展</span>
+<span class="linenos" data-linenos=" 91 "></span><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 92 "></span><span class="w">  </span><span class="c1"># Python Markdown包</span>
+<span class="linenos" data-linenos=" 93 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">abbr</span><span class="w">       </span><span class="c1"># 缩略词  *[HTML]: Hyper Text Markup Language</span>
+<span class="linenos" data-linenos=" 94 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span><span class="w"> </span><span class="c1"># 突出显示提示框  !!! note</span>
+<span class="linenos" data-linenos=" 95 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span><span class="w">  </span><span class="c1"># 属性列表（注释，按钮，颜色......）</span>
+<span class="linenos" data-linenos=" 96 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span><span class="w">   </span><span class="c1"># 自定义列表</span>
+<span class="linenos" data-linenos=" 97 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span><span class="w">  </span><span class="c1"># 脚注</span>
+<span class="linenos" data-linenos=" 98 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md_in_html</span><span class="w"> </span><span class="c1"># 允许在html中使用markdown语法</span>
+<span class="linenos" data-linenos=" 99 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">toc</span><span class="p">:</span><span class="w"> </span><span class="c1"># 目录</span>
+<span class="linenos" data-linenos="100 "></span><span class="w">      </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">目录</span><span class="w">    </span><span class="c1"># 网页语言为英语时设置（非必须）</span>
+<span class="linenos" data-linenos="101 "></span><span class="w">      </span><span class="nt">permalink</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">👻</span><span class="w"> </span><span class="c1"># 永久链接，固定标题位置为当前链接位置</span>
+<span class="linenos" data-linenos="102 "></span><span class="w">      </span><span class="nt">permalink_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Permanent link</span><span class="w"> </span><span class="c1"># 永久链接悬停标题</span>
+<span class="linenos" data-linenos="103 "></span><span class="w">      </span><span class="c1"># 使链接URL更易读</span>
+<span class="linenos" data-linenos="104 "></span><span class="w">      </span><span class="nt">slugify</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/object/apply:pymdownx.slugs.slugify</span>
+<span class="linenos" data-linenos="105 "></span><span class="w">        </span><span class="nt">kwds</span><span class="p">:</span>
+<span class="linenos" data-linenos="106 "></span><span class="w">          </span><span class="nt">case</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower</span>
+<span class="linenos" data-linenos="107 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span><span class="w">     </span><span class="c1"># 表格</span>
+<span class="linenos" data-linenos="108 "></span><span class="w">  </span><span class="c1"># Python Markdown Extension包</span>
+<span class="linenos" data-linenos="109 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.arithmatex</span><span class="p">:</span><span class="w"> </span><span class="c1"># 数学公式</span>
+<span class="linenos" data-linenos="110 "></span><span class="w">      </span><span class="nt">generic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos" data-linenos="111 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.betterem</span><span class="p">:</span><span class="w">   </span><span class="c1"># 允许嵌套使用粗体斜体</span>
+<span class="linenos" data-linenos="112 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.caret</span><span class="w">       </span><span class="c1"># 符号 ^,^^</span>
+<span class="linenos" data-linenos="113 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.tilde</span><span class="w">       </span><span class="c1"># 符号 ~,~~</span>
+<span class="linenos" data-linenos="114 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.mark</span><span class="w">        </span><span class="c1"># 符号 ==</span>
+<span class="linenos" data-linenos="115 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.details</span><span class="w">     </span><span class="c1"># 折叠突出显示提示框 ??? note</span>
+<span class="linenos" data-linenos="116 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.emoji</span><span class="p">:</span><span class="w"> </span><span class="c1"># 表情 :smile:</span>
+<span class="linenos" data-linenos="117 "></span><span class="w">      </span><span class="nt">emoji_index</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.twemoji</span>
+<span class="linenos" data-linenos="118 "></span><span class="w">      </span><span class="nt">emoji_generator</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:material.extensions.emoji.to_svg</span>
+<span class="linenos" data-linenos="119 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span><span class="w"> </span><span class="c1"># 允许代码和内容块之间任意嵌套</span>
+<span class="linenos" data-linenos="120 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.highlight</span><span class="p">:</span><span class="w"> </span><span class="c1"># 在嵌套的基础上代码高亮</span>
+<span class="linenos" data-linenos="121 "></span><span class="w">      </span><span class="nt">pygments_lang_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># 个性化不同语言的高亮（非必须）</span>
+<span class="linenos" data-linenos="122 "></span><span class="w">      </span><span class="nt">auto_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">    </span><span class="c1"># 添加标题</span>
+<span class="linenos" data-linenos="123 "></span><span class="w">      </span><span class="nt">linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># 显示行号 或指定起始行号,高亮某些行</span>
+<span class="linenos" data-linenos="124 "></span><span class="w">      </span><span class="nt">linenums_style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx-inline</span><span class="w"> </span><span class="c1"># 行号样式</span>
+<span class="linenos" data-linenos="125 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.inlinehilite</span><span class="w">  </span><span class="c1"># 行内代码高亮</span>
+<span class="linenos" data-linenos="126 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.keys</span><span class="w">        </span><span class="c1"># 键盘键 ++ctrl+alt+del++</span>
+<span class="linenos" data-linenos="127 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.smartsymbols</span><span class="w"> </span><span class="c1"># 智能符号 (c)</span>
+<span class="linenos" data-linenos="128 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.snippets</span><span class="p">:</span><span class="w"> </span><span class="c1"># 将任意文件中的内容嵌入到文档中（主目录是CustomSite）</span>
+<span class="linenos" data-linenos="129 "></span><span class="w">      </span><span class="nt">auto_append</span><span class="p">:</span>
+<span class="linenos" data-linenos="130 "></span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/assets/abbreviations.md</span><span class="w"> </span><span class="c1"># 缩略词</span>
+<span class="linenos" data-linenos="131 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tabbed</span><span class="p">:</span><span class="w"> </span><span class="c1"># 并列内容选项卡</span>
+<span class="linenos" data-linenos="132 "></span><span class="w">      </span><span class="nt">alternate_style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos" data-linenos="133 "></span><span class="w">      </span><span class="c1"># 使选项卡的跳转链接更易读</span>
+<span class="linenos" data-linenos="134 "></span><span class="w">      </span><span class="nt">slugify</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/object/apply:pymdownx.slugs.slugify</span>
+<span class="linenos" data-linenos="135 "></span><span class="w">        </span><span class="nt">kwds</span><span class="p">:</span>
+<span class="linenos" data-linenos="136 "></span><span class="w">          </span><span class="nt">case</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lower</span>
+<span class="linenos" data-linenos="137 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span><span class="w"> </span><span class="c1"># 复选列表</span>
+<span class="linenos" data-linenos="138 "></span><span class="w">      </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos" data-linenos="139 "></span>
+<span class="linenos" data-linenos="140 "></span>
+<span class="linenos" data-linenos="141 "></span><span class="c1">## 自定义javascript</span>
+<span class="linenos" data-linenos="142 "></span><span class="nt">extra_javascript</span><span class="p">:</span>
+<span class="linenos" data-linenos="143 "></span><span class="w">  </span><span class="c1"># 数学公式</span>
+<span class="linenos" data-linenos="144 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/javascripts/katex.js</span>
+<span class="linenos" data-linenos="145 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/katex@0/dist/katex.min.js</span>
+<span class="linenos" data-linenos="146 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/katex@0/dist/contrib/auto-render.min.js</span>
+<span class="linenos" data-linenos="147 "></span>
+<span class="linenos" data-linenos="148 "></span>
+<span class="linenos" data-linenos="149 "></span><span class="c1">## 自定义css</span>
+<span class="linenos" data-linenos="150 "></span><span class="nt">extra_css</span><span class="p">:</span>
+<span class="linenos" data-linenos="151 "></span><span class="w">  </span><span class="c1"># 数学公式</span>
+<span class="linenos" data-linenos="152 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/katex@0/dist/katex.min.css</span>
+<span class="linenos" data-linenos="153 "></span><span class="w">  </span><span class="c1"># 自定义字体...样式</span>
+<span class="linenos" data-linenos="154 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/stylesheets/extra.css</span>
+<span class="linenos" data-linenos="155 "></span>
+<span class="linenos" data-linenos="156 "></span>
+<span class="linenos" data-linenos="157 "></span><span class="c1">## 插件</span>
+<span class="linenos" data-linenos="158 "></span><span class="nt">plugins</span><span class="p">:</span>
+<span class="linenos" data-linenos="159 "></span><span class="w">  </span><span class="c1"># 搜索功能</span>
+<span class="linenos" data-linenos="160 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
+<span class="linenos" data-linenos="161 "></span><span class="w">      </span><span class="nt">lang</span><span class="p">:</span>
+<span class="linenos" data-linenos="162 "></span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zh</span>
+<span class="linenos" data-linenos="163 "></span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="linenos" data-linenos="164 "></span><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ja</span>
+<span class="linenos" data-linenos="165 "></span><span class="w">      </span><span class="nt">separator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[\s\u200b\-,:!=\[\]()&quot;/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&amp;[lg]t;&#39;</span>
+<span class="linenos" data-linenos="166 "></span><span class="w">  </span><span class="c1"># 标签功能</span>
+<span class="linenos" data-linenos="167 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos" data-linenos="168 "></span><span class="w">      </span><span class="nt">tags_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/tags.md</span>
+<span class="linenos" data-linenos="169 "></span>
+<span class="linenos" data-linenos="170 "></span>
+<span class="linenos" data-linenos="171 "></span><span class="c1">## 额外配置项</span>
+<span class="linenos" data-linenos="172 "></span><span class="nt">extra</span><span class="p">:</span>
+<span class="linenos" data-linenos="173 "></span><span class="w">  </span><span class="c1"># 社交账号</span>
+<span class="linenos" data-linenos="174 "></span><span class="w">  </span><span class="nt">social</span><span class="p">:</span>
+<span class="linenos" data-linenos="175 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Github | wangteqi</span>
+<span class="linenos" data-linenos="176 "></span><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/github</span>
+<span class="linenos" data-linenos="177 "></span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/wangteqi</span>
+<span class="linenos" data-linenos="178 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">QQ | 1591700776</span>
+<span class="linenos" data-linenos="179 "></span><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/qq</span>
+<span class="linenos" data-linenos="180 "></span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://wangteqi.github.io/主页/</span>
+<span class="linenos" data-linenos="181 "></span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilibili | wangteqi</span>
+<span class="linenos" data-linenos="182 "></span><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/bilibili</span>
+<span class="linenos" data-linenos="183 "></span><span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://space.bilibili.com/70766963</span>
+<span class="linenos" data-linenos="184 "></span><span class="w">  </span><span class="c1"># 文档状态 （需要更新status）</span>
+<span class="linenos" data-linenos="185 "></span><span class="w">  </span><span class="nt">status</span><span class="p">:</span>
+<span class="linenos" data-linenos="186 "></span><span class="w">    </span><span class="nt">new</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recently Add</span>
+<span class="linenos" data-linenos="187 "></span><span class="w">    </span><span class="nt">news</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recently Add</span>
+<span class="linenos" data-linenos="188 "></span><span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Removed</span>
+<span class="linenos" data-linenos="189 "></span><span class="w">  </span><span class="c1"># 标签    （需要更新tags）</span>
+<span class="linenos" data-linenos="190 "></span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos" data-linenos="191 "></span><span class="w">    </span><span class="nt">关于我</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">me_icon</span>
+<span class="linenos" data-linenos="192 "></span>
+<span class="linenos" data-linenos="193 "></span>
+<span class="linenos" data-linenos="194 "></span><span class="c1">## 导航栏  （需要更新nav）</span>
+<span class="linenos" data-linenos="195 "></span><span class="nt">not_in_nav</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w">   </span><span class="c1"># 不在导航栏中的文件</span>
+<span class="linenos" data-linenos="196 "></span><span class="w">  </span><span class="no">index.md</span>
+<span class="linenos" data-linenos="197 "></span><span class="w">  </span><span class="no">assets/abbreviations.md</span>
+<span class="linenos" data-linenos="198 "></span><span class="nt">nav</span><span class="p">:</span><span class="w"> </span><span class="c1"># 在导航栏中的文件</span>
+<span class="linenos" data-linenos="199 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">我</span><span class="p">:</span><span class="w"> </span><span class="c1"># 使用index.md说明该标签页的概述</span>
+<span class="linenos" data-linenos="200 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ME/index.md</span>
+<span class="linenos" data-linenos="201 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">个人简介</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ME/resume.md</span>
+<span class="linenos" data-linenos="202 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">笔记</span><span class="p">:</span>
+<span class="linenos" data-linenos="203 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOTE/index.md</span>
+<span class="linenos" data-linenos="204 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MacOS设置</span><span class="p">:</span>
+<span class="linenos" data-linenos="205 "></span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">系统偏好设置</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOTE/MacOS/system_config.md</span>
+<span class="linenos" data-linenos="206 "></span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">常用软件设置</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOTE/MacOS/software_config.md</span>
+<span class="linenos" data-linenos="207 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">个人网站搭建</span><span class="p">:</span>
+<span class="linenos" data-linenos="208 "></span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Github中的配置</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOTE/Website/github_config.md</span>
+<span class="linenos" data-linenos="209 "></span><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Pycharm中的配置</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOTE/Website/pycharm_config.md</span>
+<span class="linenos" data-linenos="210 "></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">标签</span><span class="p">:</span>
+<span class="linenos" data-linenos="211 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/tags.md</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="工作流文件的配置">工作流文件的配置<a class="headerlink" href="#工作流文件的配置" title="Permanent link">👻</a></h2>
+<ul>
+<li>
+<p>官方配置文档：<a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions">Material for Mkdocs-Github Action</a>，<a href="https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions?learn=getting_started&amp;learnProduct=actions">Github官网文档</a></p>
+</li>
+<li>
+<p>相关资料</p>
+<ul>
+<li><a href="https://zhsher.cn/posts/7339/index.html">Action的相关教程</a></li>
+<li><a href="https://hailangya.com/articles/2021/12/17/github-actions-cache/">Action使用缓存</a></li>
+<li><a href="https://github.com/actions/cache/blob/main/examples.md#python---pip">pip的cache路径</a></li>
+<li><a href="https://nolebase.ayaka.io/%E7%AC%94%E8%AE%B0/%F0%9F%9B%A0%EF%B8%8F%20%E5%BC%80%E5%8F%91/%F0%9F%9F%A2%20%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%20%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%20CICD/GitHub%20Actions/%E4%BB%93%E5%BA%93%E5%86%85%E7%9A%84%20GitHub%20Actions%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BD%BF%E7%94%A8%20GitHub%20Actions%20Bot%20%E6%9D%A5%E6%8F%90%E4%BA%A4.html#%E4%BB%93%E5%BA%93%E5%86%85%E7%9A%84-github-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BD%BF%E7%94%A8-github-actions-bot-%E6%9D%A5%E6%8F%90%E4%BA%A4">Github Action Bot的使用</a></li>
+</ul>
+</li>
+<li>
+<p>文件路径：./.github/workflows/custom_site_publish.yml</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># 定义工作流名称</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-site-publish</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># 触发条件</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nt">on</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="c1"># 这个工作流会在每次向仓库main分支推送代码时触发</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1">## 构建工作流中的任务</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nt">jobs</span><span class="p">:</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span><span class="c1"># 任务名称</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="c1"># 指定环境</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-deploy</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="c1"># 指定了运行该任务的虚拟环境是最新版本的Ubuntu</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="c1"># 执行步骤</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">      </span><span class="c1">## 推送到Github上</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">      </span><span class="c1"># 检出代码到运行工作流的虚拟环境中</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span><span class="w">  </span><span class="c1"># 动作名称</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span><span class="w">  </span><span class="c1"># 动作</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">      </span><span class="c1"># 配置Git凭证，由GitHub Actions Bot完成后续的提交操作</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure Git Credentials</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">          </span><span class="no">git config user.name &quot;github-actions[bot]&quot;</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">          </span><span class="no">git config user.email &quot;41898282+github-actions[bot]@users.noreply.github.com&quot;</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">      </span><span class="c1"># 自动设置python环境</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
+<span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"> </span><span class="c1"># 指定版本参数</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+<span class="linenos" data-linenos="32 "></span><span class="w">      </span><span class="c1">## 使用缓存更快的下载相关包</span>
+<span class="linenos" data-linenos="33 "></span><span class="w">      </span><span class="c1"># 缓存文件</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache modules</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">        </span><span class="c1"># 使用缓存action</span>
+<span class="linenos" data-linenos="36 "></span><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v4</span>
+<span class="linenos" data-linenos="37 "></span><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="linenos" data-linenos="38 "></span><span class="w">          </span><span class="c1"># 需要缓存的文件的路径</span>
+<span class="linenos" data-linenos="39 "></span><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
+<span class="linenos" data-linenos="40 "></span><span class="w">          </span><span class="c1"># 对缓存的文件指定的唯一表示</span>
+<span class="linenos" data-linenos="41 "></span><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ runner.os }}-pip-${{ hashFiles(&#39;**/requirements.txt&#39;) }}</span>
+<span class="linenos" data-linenos="42 "></span><span class="w">          </span><span class="c1"># 当 key 没有命中缓存时，用于恢复缓存key值的有序列表</span>
+<span class="linenos" data-linenos="43 "></span><span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="linenos" data-linenos="44 "></span><span class="w">            </span><span class="no">${{ runner.os }}-pip-</span>
+<span class="linenos" data-linenos="45 "></span><span class="w">      </span><span class="c1">## 安装相关依赖包</span>
+<span class="linenos" data-linenos="46 "></span><span class="w">      </span><span class="c1"># 使用包管理工具pip安装 mkdocs-material</span>
+<span class="linenos" data-linenos="47 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="linenos" data-linenos="48 "></span><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="linenos" data-linenos="49 "></span><span class="w">      </span><span class="c1">## 部署网站</span>
+<span class="linenos" data-linenos="50 "></span><span class="w">      </span><span class="c1"># 使用 mkdocs-material 构建网站并部署到 gh-pages 分支</span>
+<span class="linenos" data-linenos="51 "></span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to gh-pages</span>
+<span class="linenos" data-linenos="52 "></span><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="主页index文件的配置">主页index文件的配置<a class="headerlink" href="#主页index文件的配置" title="Permanent link">👻</a></h2>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="gh"># 👋</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>你好
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>这里是王特起的主页 :simple-homepage:
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>（待完善）
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="gu">## 板块</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">-</span><span class="w"> </span>[<span class="nt">关于我</span>](<span class="na">ME/index.md</span>)：关于我的一些资料
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="k">-</span><span class="w"> </span>[<span class="nt">内容标签</span>](<span class="na">assets/tags.md</span>)：标签
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="gu">## 功能</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span><span class="k">1.</span> 基础配置
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="k">- [ ]</span> MacOS
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="k">- [ ]</span> Typora
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="k">- [ ]</span> Royal tsx
+</code></pre></div>
+<h2 id="附加文件的配置">附加文件的配置<a class="headerlink" href="#附加文件的配置" title="Permanent link">👻</a></h2>
+<h3 id="js文件的配置">js文件的配置<a class="headerlink" href="#js文件的配置" title="Permanent link">👻</a></h3>
+<ul>
+<li>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/math/#katex-docsjavascriptskatexjs">支持数学公式</a></p>
+</li>
+<li>
+<p>文件路径：./docs/assets/javascripts/katex.js</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// 数学公式katex</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(({</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">  </span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$$&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$$&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="w">   </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="w">   </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\]&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">],</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span><span class="p">})</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">})</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="css文件的配置">css文件的配置<a class="headerlink" href="#css文件的配置" title="Permanent link">👻</a></h3>
+<ul>
+<li>
+<p>自定义样式，如<a href="https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status">自定义文档状态图标</a></p>
+</li>
+<li>
+<p>文件路径：./docs/assets/stylesheets/extra.css</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-css highlight"><span class="filename">CSS</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c">/*自定义样式*/</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="c">/*文档状态的图标*/</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="nv">--md-status--news</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s1">&#39;data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 4c1.11 0 2 .89 2 2v12c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2V6c0-1.11.89-2 2-2h16M8.5 15V9H7.25v3.5L4.75 9H3.5v6h1.25v-3.5L7.3 15h1.2m5-4.74V9h-4v6h4v-1.25H11v-1.11h2.5v-1.26H11v-1.12h2.5m7 3.74V9h-1.25v4.5h-1.12V10h-1.25v3.5h-1.13V9H14.5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1Z&quot;/&gt;&lt;/svg&gt;&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="p">.</span><span class="nc">md-status--news</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="k">mask-image</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--md-status--news</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kp">-webkit-</span><span class="k">mask-image</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--md-status--news</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="c">/* 无序列表样式 */</span>
+<span class="linenos" data-linenos="13 "></span><span class="nt">article</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">disc</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span><span class="nt">article</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">circle</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span><span class="nt">article</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">circle</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="linenos" data-linenos="23 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="nt">article</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">circle</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="linenos" data-linenos="27 "></span><span class="p">}</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="缩略词文件的配置">缩略词文件的配置<a class="headerlink" href="#缩略词文件的配置" title="Permanent link">👻</a></h3>
+<ul>
+<li>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary">自定义缩略词表</a></p>
+</li>
+<li>
+<p>文件路径：./docs/assets/abbreviations.md</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>*[HTML]: Hyper Text Markup Language
+<span class="linenos" data-linenos="2 "></span>*[W3C]: World Wide Web Consortium
+</code></pre></div>
+</li>
+</ul>
+<h3 id="标签文件的配置">标签文件的配置<a class="headerlink" href="#标签文件的配置" title="Permanent link">👻</a></h3>
+<ul>
+<li>
+<p><a href="https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags">自定义文章所属的标签</a>，<a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#tag-icons-and-identifiers">标签图标</a></p>
+</li>
+<li>
+<p>文件路径：./docs/assets/tags.md</p>
+</li>
+<li>
+<p>文件内容</p>
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="gh"># 标签</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>相关标签列表：
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>&lt;!-- material/tags --&gt;
+</code></pre></div>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../github_config/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Github中的配置">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Github中的配置
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../assets/tags/" class="md-footer__link md-footer__link--next" aria-label="Next: 标签">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                标签
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 ~ now |  🫥 王特起 (QiQ_iQi)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/wangteqi" target="_blank" rel="noopener" title="Github | wangteqi" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://wangteqi.github.io/主页/" target="_blank" rel="noopener" title="QQ | 1591700776" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/70766963" target="_blank" rel="noopener" title="Bilibili | wangteqi" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"\u5173\u4e8e\u6211": "me_icon"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
