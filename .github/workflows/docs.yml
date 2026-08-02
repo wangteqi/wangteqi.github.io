@@ -1,0 +1,37 @@
+# 定义工作流名称
+name: site-publish
+# 触发条件，这个工作流会在每次向仓库main分支推送代码时触发
+on:
+  push:
+    branches:
+      - main
+# 权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# 构建工作流中的任务
+jobs:
+  # 任务名称
+  deploy:
+    # 指定环境
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # 指定了运行该任务的虚拟环境是最新版本的Ubuntu
+    runs-on: ubuntu-latest
+    # 执行步骤
+    steps:
+      - uses: actions/configure-pages@v6
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - run: pip install zensical
+      - run: zensical build --clean
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - uses: actions/deploy-pages@v5
+        id: deployment
+        

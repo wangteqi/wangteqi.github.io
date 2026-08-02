@@ -1,0 +1,5 @@
+# macos文件
+.DS_Store
+
+# pycharm文件
+.idea/
