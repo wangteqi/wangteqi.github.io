@@ -15,8 +15,8 @@ tags:
 ### 创建Github仓库
 
 - 设置Repository name：wangteqi.github.io
-- 设置Description：王特起的个人网站
-- 设置Configuration/Add README：On
+- 设置Description：[王特起的个人网站](www.baidu.com)
+- 设置Configuration/Add README：On<button class="primary">按钮</button>
 
 ![new-repository](./assets/website/new-repository.png)
 

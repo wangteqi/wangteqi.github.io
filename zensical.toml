@@ -11,6 +11,8 @@ site_author = "王特起"
 repo_name = "wangteqi/wangteqi.github.io"
 # Github仓库地址
 repo_url = "https://github.com/wangteqi/wangteqi.github.io"
+# 指定 GitHub 分支和 Markdown 文件目录
+edit_uri = "edit/main/docs/"
 # css配置
 extra_css = ["assets/stylesheets/extra.css"]
 # JavaScript配置
