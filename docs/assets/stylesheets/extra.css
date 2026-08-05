@@ -1,16 +1,84 @@
-/*logo图标颜色*/
+/* =========================================================
+   本地字体
+   ========================================================= */
+@font-face {
+    font-family: "LXGW WenKai";
+    src: url("../fonts/LXGWWenKai/LXGWWenKai-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LXGW WenKai";
+    src: url("../fonts/LXGWWenKai/LXGWWenKai-Medium.ttf")
+         format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Bold.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Italic.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-BoldItalic.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* 正文、标题、导航栏、目录 */
+    --md-text-font: "LXGW WenKai";
+    /* 代码块、行内代码 */
+    --md-code-font: "Maple Mono NF CN";
+}
+
+/* =========================================================
+   图标颜色
+   ========================================================= */
+
+/* Logo 图标颜色 */
 .md-header__button.md-logo,
 .md-nav__button.md-logo {
     color: #f59e0b;
 }
 
-/*repo图标颜色*/
+/* Repo 图标颜色 */
 .md-header__source .md-source__icon,
 .md-nav__source .md-source__icon {
     color: #8b5cf6;
 }
 
-/*文档icon颜色*/
+/* Git 文档图标颜色 */
 .md-nav__link[href*="/git/"] svg {
     color: #bd09cb;
 }
