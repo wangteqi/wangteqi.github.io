@@ -1,0 +1,91 @@
+/* ================================本地字体================================ */
+@font-face {
+    font-family: "LXGW WenKai";
+    src: url("../fonts/LXGWWenKai/LXGWWenKai-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LXGW WenKai";
+    src: url("../fonts/LXGWWenKai/LXGWWenKai-Medium.ttf")
+         format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Bold.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-Italic.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono NF CN";
+    src: url("../fonts/MapleMono-NF-CN/MapleMono-NF-CN-BoldItalic.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* 正文、标题、导航栏、目录 */
+    --md-text-font: "LXGW WenKai";
+    /* 代码块、行内代码 */
+    --md-code-font: "Maple Mono NF CN";
+}
+
+/* ================================图标颜色================================ */
+/* Logo 图标颜色 */
+.md-header__button.md-logo,
+.md-nav__button.md-logo {
+    color: #f59e0b;
+}
+
+/* Repo 图标颜色 */
+.md-header__source .md-source__icon,
+.md-nav__source .md-source__icon {
+    color: #8b5cf6;
+}
+
+/* macos 文档图标颜色 */
+.md-nav__link[href*="/macos/"] svg,
+.md-nav__link[href*="/ubuntu/"] svg,
+.md-nav__link[href*="/git/"] svg,
+.md-nav__link[href*="/markdown/"] svg,
+.md-nav__link[href*="/website/"] svg,
+.md-nav__link[href*="/server/"] svg,
+.md-nav__link[href*="/python/"] svg,
+.md-nav__link[href*="/numpy/"] svg,
+.md-nav__link[href*="/pytorch/"] svg,
+.md-nav__link[href*="/bp/"] svg,
+.md-nav__link[href*="/cv/"] svg,
+.md-nav__link[href*="/nlp/"] svg,
+.md-nav__link[href*="/pipeline/"] svg {
+  color: #097acb;
+}

@@ -1,0 +1,198 @@
+[project]
+# 网站名称
+site_name = "王特起的个人网站"
+# 网站地址
+site_url = "https://wangteqi.github.io"
+# 网站说明
+site_description = "记录日常"
+# 网站作者
+site_author = "王特起"
+# Github仓库名称
+repo_name = "wangteqi/wangteqi.github.io"
+# Github仓库地址
+repo_url = "https://github.com/wangteqi/wangteqi.github.io"
+# 指定 GitHub 分支和 Markdown 文件目录
+edit_uri = "edit/main/docs/"
+# css配置
+extra_css = ["assets/stylesheets/extra.css"]
+# JavaScript配置
+extra_javascript = [
+    "assets/javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+# 版权信息
+copyright = "Copyright &copy; 2026 ~ now  |  王特起"
+
+#######################################################################################################
+##########################################平时修改部分###################################################
+# 显式导航
+nav = [
+    { "首页" = "index.md" },
+    { "开发技术" = [
+        { "开发技术总览" = "dev/index.md" },
+        { "操作系统与环境" = [
+            { "macOS 配置" = "dev/system/macos.md" },
+            { "Ubuntu 配置" = "dev/system/ubuntu.md" }
+        ] },
+        { "开发工具基础" = [
+            { "Git 基础" = "dev/tools/git.md" },
+            { "Markdown 基础" = "dev/tools/markdown.md" },
+            { "网站搭建基础" = "dev/tools/website.md" }
+        ] }
+    ] },
+    { "个人研究" = [
+        { "个人研究总览" = "research/index.md" },
+        { "深度学习基础" = [
+            { "服务器配置" = "research/deep-learning/server.md" },
+            { "Python学习" = "research/deep-learning/python.md" },
+            { "Numpy学习" = "research/deep-learning/numpy.md" },
+            { "Pytorch学习" = "research/deep-learning/pytorch.md" },
+            { "反向传播算法" = "research/deep-learning/bp.md" },
+            { "计算机视觉学习" = "research/deep-learning/cv.md" },
+            { "自然语言处理学习" = "research/deep-learning/nlp.md" },
+            { "模型训练流程" = "research/deep-learning/pipeline.md" }
+        ] }
+    ] }
+]
+
+# 标签
+[project.extra.tags]
+system = "tags-system"
+tools = "tags-tools"
+deep-learning = "tags-deep-learning"
+robot-policy = "tags-robot-policy"
+projects = "tags-projects"
+[project.theme.icon.tag]
+default = "lucide/tag"
+tags-system = "fontawesome/solid/gears"
+tags-tools = "fontawesome/brands/dev"
+tags-deep-learning = "fontawesome/solid/user-astronaut"
+tags-robot-policy = "fontawesome/brands/bots"
+tags-projects = "fontawesome/solid/laptop-file"
+##########################################平时修改部分###################################################
+#######################################################################################################
+
+# 社交链接
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/wangteqi"
+name = "github.com"
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://x.com/teqiwang"
+name = "x.com"
+
+[project.theme]
+# 现代主题
+variant = "modern"
+# 禁止从 Google Fonts 加载字体，改用本地字体
+font = false
+# 网站语言
+language = "zh"
+# 主题功能
+features = [
+    # 页脚
+    "navigation.footer",
+    # 查看/编辑页面源码
+    "content.action.view",
+    "content.action.edit",
+    # 页面切换
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.instant.progress",
+    # 顶部导航
+    "navigation.tabs",
+    # 导航结构
+    "navigation.tracking",
+    "navigation.sections",
+    "navigation.path",
+    "navigation.indexes",
+    # 阅读体验
+    "toc.follow",
+    "navigation.top",
+    # 搜索
+    "search.highlight",
+    # 选择/复制代码
+    "content.code.select",
+    "content.code.copy",
+    # 同步内容选项卡
+    "content.tabs.link",
+    # 脚注悬浮提示
+    "content.footnote.tooltips",
+    # 悬浮提示
+    "content.tooltips"
+]
+
+# 跟随系统主题
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+# 浅色主题
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+# 深色主题
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+# 图标
+[project.theme.icon]
+logo = "lucide/sparkles"
+repo = "fontawesome/brands/github-alt"
+view = "material/eye"
+edit = "material/pencil"
+
+# Markdown基础扩展
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+title = "目录"
+permalink = "⚓︎"
+permalink_title = "Anchor link to this section"
+[project.markdown_extensions.toc.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+[project.markdown_extensions.tables]
+# Markdown额外扩展
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.blocks.caption]
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.tilde]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+[project.markdown_extensions.pymdownx.highlight]
+pygments_lang_class = true
+anchor_linenums = true
+line_spans = "__span"
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.snippets]
+auto_append = ["docs/assets/abbreviations.md"]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
